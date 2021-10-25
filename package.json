@@ -8,15 +8,16 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^43.0.0",
+    "@react-native-community/hooks": "^2.8.0",
+    "expo": "^43.0.1",
     "expo-status-bar": "~1.1.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-native": "^0.61.4",
-    "react-native-web": "0.17.1"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native": "^0.66.1",
+    "react-native-web": "0.17.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.15.8"
   },
   "private": true
 }

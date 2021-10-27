@@ -3,7 +3,7 @@ import { ImageBackground,StyleSheet,View,Image,Text} from 'react-native';
 
 import colors from '../config/colors';
 
-function WelcomeScreen(props) {
+function WelcomeScreen() {
     return (
         <ImageBackground 
         style={styles.background}
@@ -12,10 +12,14 @@ function WelcomeScreen(props) {
                 <Image 
                 style={styles.logo}
                 source={require("../assets/K-white-logo.png")}/>
-                <Text>Welcome to K-commerce</Text>
+                {/* <Text>Welcome to K-commerce</Text> */}
             </View>
-            <View style={styles.loginButton}></View>
-            <View style={styles.registerButton}></View>
+            <View style={styles.loginButton}>
+                <Text style={styles.loginText}>Login</Text>
+            </View>
+            <View style={styles.registerButton}>
+                <Text style={styles.RegisterText}>Register</Text>
+            </View>
 
         </ImageBackground>
     );
@@ -38,7 +42,7 @@ const styles = StyleSheet.create({
         width:100,
         height:100,
         position:'absolute',
-        top:50,
+        top:0,
     },
 
     loginButton:{
@@ -51,6 +55,22 @@ const styles = StyleSheet.create({
         width:"100%",
         height:50,
         backgroundColor:colors.secondary,
+    },
+
+    loginText:{
+        fontSize:20,
+        position:'absolute',
+        top:10,
+        left:160,
+        alignItems:'center'
+    },
+
+    RegisterText:{
+        fontSize:20,
+        position:'absolute',
+        top:10,
+        left:150,
+        alignItems:'center'
     }
 })
 

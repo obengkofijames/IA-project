@@ -1,9 +1,9 @@
 import React from 'react';
-import { ImageBackground,StyleSheet,View,Image,Text} from 'react-native';
+import { ImageBackground,StyleSheet,View,Image,Text,TouchableOpacity} from 'react-native';
 
 import colors from '../config/colors';
 
-function WelcomeScreen() {
+function WelcomeScreen({navigation}) {
     return (
         <ImageBackground 
         style={styles.background}
@@ -12,14 +12,19 @@ function WelcomeScreen() {
                 <Image 
                 style={styles.logo}
                 source={require("../assets/K-white-logo.png")}/>
-                {/* <Text>Welcome to K-commerce</Text> */}
+                <Text style={styles.WelcomeMessage}>Welcome to K-commerce</Text>
             </View>
-            <View style={styles.loginButton}>
+            
+            <TouchableOpacity 
+            onPress={() => {
+                navigation.navigate("ViewImage")
+            }}
+            style={styles.loginButton}>
                 <Text style={styles.loginText}>Login</Text>
-            </View>
-            <View style={styles.registerButton}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.registerButton}>
                 <Text style={styles.RegisterText}>Register</Text>
-            </View>
+            </TouchableOpacity>
 
         </ImageBackground>
     );
@@ -32,6 +37,11 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
 
+    WelcomeMessage:{
+        fontWeight:'bold',
+        fontSize:15,
+    },
+
     logoContainer:{
         position:'absolute',
         top:50,
@@ -42,7 +52,7 @@ const styles = StyleSheet.create({
         width:100,
         height:100,
         position:'absolute',
-        top:0,
+        top:10,
     },
 
     loginButton:{
@@ -59,6 +69,7 @@ const styles = StyleSheet.create({
 
     loginText:{
         fontSize:20,
+        fontWeight:"600",
         position:'absolute',
         top:10,
         left:160,
@@ -67,6 +78,7 @@ const styles = StyleSheet.create({
 
     RegisterText:{
         fontSize:20,
+        fontWeight:"600",
         position:'absolute',
         top:10,
         left:150,

@@ -11,7 +11,7 @@ export default function App() {
   return (
     <View style={{flex:1}}>
       <NavigationContainer>
-          <MainNavigator.Navigator>
+          <MainNavigator.Navigator screenOptions={{headerShown:false}}>
             <MainNavigator.Screen name="Welcome to K-commerce" component={WelcomeScreen}/>
             <MainNavigator.Screen name="ViewImage" component={ViewImage}/>
           </MainNavigator.Navigator>

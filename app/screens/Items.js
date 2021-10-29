@@ -20,7 +20,7 @@ export default function Items(props) {
         }}
       >
         <Ionicons name="ios-menu-outline" size={24} color="black" />
-        <FontAwesome name="motorcycle" size={24} color="black" />
+        <Ionicons name="cart-sharp" size={24} color="black" />
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
           <AntDesign name="search1" size={20} color="black" />
           <Ionicons name="notifications-outline" size={20} color="black" />

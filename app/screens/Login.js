@@ -3,6 +3,7 @@ import { View, Text, Image, TextInput, TouchableOpacity,ImageBackground,StyleShe
 import { AntDesign,Ionicons } from "@expo/vector-icons";
 import colors from "../config/colors";
 import { Colors } from "react-native/Libraries/NewAppScreen";
+import * as Animatable from 'react-native-animatable';
 
 export default function Login(props) {
   const navigation = props.navigation;
@@ -10,15 +11,16 @@ export default function Login(props) {
     <ImageBackground 
     style={styles.background}
     source={require("../assets/full.jpg")}>
-        {/* <View
-        style={{
-            backgroundColor: "white",
-            flex: 1,
-            paddingHorizontal: 20,
-            justifyContent: "center",
-            alignItems: "center",
-        }}
-        > */}
+        <Animatable.View
+        animation="fadeInUpBig"
+        // style={{
+        //     backgroundColor: "white",
+        //     flex: 1,
+        //     paddingHorizontal: 20,
+        //     justifyContent: "center",
+        //     alignItems: "center",
+        // }}
+        >
         {/* <Image
             style={{
             //   transform: [{ rotate: "45deg" }],
@@ -31,7 +33,7 @@ export default function Login(props) {
             //   uri: "https://images.unsplash.com/photo-1633114127188-99b4dd741180?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
             }
         /> */}
-        <Text style={{ fontSize: 20, color: "grey" }}>Welcome to</Text>
+        <Text style={{ fontSize: 20, color: "grey", textAlign:"center"}}>Welcome to</Text>
         <View style={{flexDirection:"row"}}>
         <Ionicons name="cart-sharp" size={24} color={Colors.primary} />
         <Text style={{ fontSize: 30, fontWeight: "bold",color:colors.primary, }}>K-commerce</Text>
@@ -84,7 +86,7 @@ export default function Login(props) {
             <AntDesign name="login" size={24} color="white" />
             <Text style={{ paddingLeft: 10, color: "white" }}>Login</Text>
         </TouchableOpacity>
-        {/* </View> */}
+        </Animatable.View>
     </ImageBackground>
   );
 }

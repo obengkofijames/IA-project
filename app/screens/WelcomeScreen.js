@@ -17,12 +17,18 @@ function WelcomeScreen({navigation}) {
             
             <TouchableOpacity 
             onPress={() => {
-                navigation.navigate("ViewImage")
+                navigation.navigate("Login")
             }}
             style={styles.loginButton}>
                 <Text style={styles.loginText}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.registerButton}>
+
+            <TouchableOpacity 
+
+                onPress={() => {
+                    navigation.navigate("Register")
+                }}
+            style={styles.registerButton}>
                 <Text style={styles.RegisterText}>Register</Text>
             </TouchableOpacity>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Text,View,StyleSheet,ImageBackground,TextInput,TouchableOpacity,Image } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import {FontAwesome5,Feather,AntDesign,Ionicons} from "@expo/vector-icons";
-import colors from '../config/colors';
+import Colors from '../config/Colors';
 
 function Register({navigation}) {
     
@@ -12,8 +12,8 @@ function Register({navigation}) {
             <View style={styles.header}>
                 <View style={{flexDirection:"row"}}>
                     <Text style={{marginRight:10,}}>Welcome</Text>
-                    <Ionicons name="cart-sharp" size={24} color={colors.killed} />
-                    <Text style={{ fontSize: 30, fontWeight: "bold",color:colors.killed, }}>K-commerce</Text>
+                    <Ionicons name="cart-sharp" size={24} color={Colors.killed} />
+                    <Text style={{ fontSize: 30, fontWeight: "bold",color:Colors.killed, }}>K-commerce</Text>
                 </View>
             </View>
             <Animatable.View 

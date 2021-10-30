@@ -1,7 +1,7 @@
 import React from 'react';
 import{Image,StyleSheet, View} from 'react-native';
 
-import colors from '../config/colors';
+import Colors from '../config/Colors';
 
 function ViewImage() {
     return (
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     closeButton:{
         width:50,
         height:30,
-        backgroundColor:colors.primary,
+        backgroundColor:Colors.primary,
         position:"absolute",
         top:30,
         left:20,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     deleteButton:{
         width:50,
         height:30,
-        backgroundColor:colors.secondary,
+        backgroundColor:Colors.secondary,
         position:"absolute",
         top:30,
         right:20,

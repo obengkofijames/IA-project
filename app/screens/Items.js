@@ -1,9 +1,9 @@
 import React from "react";
-import { View,StyleSheet,Text, TouchableOpacity } from "react-native";
+import { View,StyleSheet,Text,TouchableOpacity, FlatList,} from "react-native";
 import { Ionicons,EvilIcons,MaterialCommunityIcons } from "@expo/vector-icons";
 import { TextInput } from "react-native-gesture-handler";
-import colors from "../config/colors";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import Colors from "../config/Colors";
+import {clothes} from "../config/clothes";
 
 export default function Items(props) {
   
@@ -62,6 +62,9 @@ export default function Items(props) {
 
       {/* categories */}
       <CategoriesList />
+
+      {/* cards  */}
+      < FlatList numColumns={2} data={clothes}/>
     </View>
     
   );
@@ -73,14 +76,14 @@ const styles = StyleSheet.create({
     height:50,
     borderRadius:10,
     alignItems:"center",
-    backgroundColor:Colors.primary,
+    backgroundColor:Colors.secondary,
     flexDirection:"row",
   },
 
   searchText:{
     fontSize:18,
     fontWeight:"bold",
-    color:colors.killed,
+    color:Colors.killed,
     flex:1,
   },
 
@@ -108,9 +111,9 @@ const styles = StyleSheet.create({
   },
 
   categoryTextSelected:{
-    color:Colors.primary,
+    color:Colors.secondary,
     paddingBottom:5,
     borderBottomWidth:2,
-    borderColor:Colors.primary,
+    borderColor:Colors.secondary,
   },
 })

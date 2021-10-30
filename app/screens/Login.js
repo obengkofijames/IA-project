@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image, TextInput, TouchableOpacity,ImageBackground,StyleSheet } from "react-native";
 import { AntDesign,Ionicons } from "@expo/vector-icons";
-import colors from "../config/colors";
+import colors from "../config/Colors";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import * as Animatable from 'react-native-animatable';
 

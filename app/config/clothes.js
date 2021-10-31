@@ -5,38 +5,39 @@ import { View,StyleSheet,Text,TouchableOpacity, FlatList,ImageBackground, _View}
 export default function Items(props) {
     return (
         <View style={styles.container}>
-
-            <View style={styles.card}>
+            
+            
+            <TouchableOpacity style={styles.card}>
                 <View style={styles.inner}>
                     <ImageBackground resizeMode={"contain"} style={styles.background}
                         source={require("../assets/pinkT.jpg")}>
                     </ImageBackground>
                 </View>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.card}>
+            <TouchableOpacity style={styles.card}>
                 <View style={styles.inner}>
                     <ImageBackground resizeMode={"contain"} style={styles.background}
                         source={require("../assets/dress.jpg")}>
                     </ImageBackground>
                 </View>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.card}>
+            <TouchableOpacity style={styles.card}>
                 <View style={styles.inner}>
                     <ImageBackground resizeMode={"contain"} style={styles.background}
                         source={require("../assets/bag.jpg")}>
                     </ImageBackground>
                 </View>
-            </View>
+            </TouchableOpacity>
 
-            <View style={styles.card}>
+            <TouchableOpacity style={styles.card}>
                 <View style={styles.inner}>
                     <ImageBackground resizeMode={"contain"} style={styles.background}
                         source={require("../assets/african.jpg")}>
                     </ImageBackground>
                 </View>
-            </View>
+            </TouchableOpacity>
             
 
         </View>

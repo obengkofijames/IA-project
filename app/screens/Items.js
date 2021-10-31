@@ -1,15 +1,16 @@
 import React from "react";
-import { View,StyleSheet,Text,TouchableOpacity, FlatList,} from "react-native";
-import { Ionicons,EvilIcons,MaterialCommunityIcons } from "@expo/vector-icons";
+import { View,StyleSheet,Text,TouchableOpacity, FlatList,Dimensions} from "react-native";
+import { Ionicons,EvilIcons,MaterialCommunityIcons,FontAwesome5 } from "@expo/vector-icons";
 import { TextInput } from "react-native-gesture-handler";
 import Colors from "../config/Colors";
-import {clothes} from "../config/clothes";
+import Clothes from "../config/Clothes"
+
 
 export default function Items(props) {
   
     // category
   const categories= ["General","Official","Summer","Winter"];
-  const [categoryIndex,setCategoryIndex] = React.useState(0)
+  const [categoryIndex,setCategoryIndex] = React.useState(0);
 
   const CategoriesList = () =>{
     return <View style={styles.categoriesContainer}>
@@ -42,7 +43,8 @@ export default function Items(props) {
       >
         <Ionicons name="ios-menu-outline" size={24} color="black" />
         <Ionicons name="cart-sharp" size={24} color="black" />
-        <Ionicons name="notifications-outline" size={20} color="black" />
+        <FontAwesome5 name="user" size={24} color="black" />
+        {/* <Ionicons name="notifications-outline" size={20} color="black" /> */}
       </View>
 
         
@@ -63,8 +65,7 @@ export default function Items(props) {
       {/* categories */}
       <CategoriesList />
 
-      {/* cards  */}
-      < FlatList numColumns={2} data={clothes}/>
+      <Clothes/>
     </View>
     
   );
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
   },
 
   sortBtn:{
-    backgroundColor:"red",
+    backgroundColor:Colors.primary,
     marginLeft:10,
     borderRadius:7,
     width:50,

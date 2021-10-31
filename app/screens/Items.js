@@ -6,7 +6,7 @@ import Colors from "../config/Colors";
 import Clothes from "../config/Clothes"
 
 
-export default function Items(props) {
+export default function Items() {
   
     // category
   const categories= ["General","Official","Summer","Winter"];
@@ -43,8 +43,8 @@ export default function Items(props) {
       >
         <Ionicons name="ios-menu-outline" size={24} color="black" />
         <Ionicons name="cart-sharp" size={24} color="black" />
-        <FontAwesome5 name="user" size={24} color="black" />
-        {/* <Ionicons name="notifications-outline" size={20} color="black" /> */}
+        {/* <FontAwesome5 name="user" size={24} color="black" /> */}
+        <Ionicons name="notifications-outline" size={20} color="black" />
       </View>
 
         
@@ -65,7 +65,9 @@ export default function Items(props) {
       {/* categories */}
       <CategoriesList />
 
+        {/* Items */}
       <Clothes/>
+
     </View>
     
   );

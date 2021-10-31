@@ -6,6 +6,7 @@ import ViewImage from './app/screens/ViewImage';
 import Login from './app/screens/Login';
 import Register from './app/screens/Register';
 import Items from './app/screens/Items';
+// import DetailScreen from './app/screens/DetailScreen'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -20,6 +21,8 @@ export default function App() {
             <MainNavigator.Screen name="Login" component={Login}/>
             <MainNavigator.Screen name="Register" component={Register}/>
             <MainNavigator.Screen name="Items" component={Items}/>
+            {/* <MainNavigator.Screen name="Detail" component={DetailScreen}/> */}
+
           </MainNavigator.Navigator>
       </NavigationContainer>
     </View>

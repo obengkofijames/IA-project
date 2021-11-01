@@ -4,7 +4,7 @@ import * as Animatable from 'react-native-animatable';
 import {FontAwesome5,Feather,AntDesign,Ionicons} from "@expo/vector-icons";
 import Colors from '../config/Colors';
 
-function Register({navigation}) {
+export function Register({navigation}) {
     
     return (
         <ImageBackground style={styles.background}

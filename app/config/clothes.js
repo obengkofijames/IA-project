@@ -5,11 +5,16 @@ import { AntDesign } from '@expo/vector-icons';
 
 
 export default function Clothes(props) {
+    const navigation = props.navigation;
     return (
-        <View style={styles.container}>
+        <View style={styles.clothesContainer}>
             
             
             <TouchableOpacity 
+            // onPress = { () =>{
+            //     navigation.navigate("DetailScreen")
+            //     this.props.navigation.navigate('DetailScreen')
+            // }}
             style={styles.card}>
                 <View style={styles.inner}>
                     <ImageBackground resizeMode={"contain"} style={styles.background}
@@ -64,10 +69,10 @@ export default function Clothes(props) {
 }
 
 const styles = StyleSheet.create({
-    container :{
+    clothesContainer :{
         flex:1,
         width:"100%",
-        height:"85%",
+        // height:"85%",
         padding:5,
         flexDirection:"row",
         flexWrap:"wrap",

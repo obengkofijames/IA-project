@@ -1,13 +1,13 @@
 import React from "react";
-import { View,StyleSheet,Text,TouchableOpacity, FlatList,Dimensions} from "react-native";
-import { Ionicons,EvilIcons,MaterialCommunityIcons,FontAwesome5 } from "@expo/vector-icons";
+import { View,StyleSheet,Text,TouchableOpacity, FlatList,Dimensions,ImageBackground} from "react-native";
+import { Ionicons,EvilIcons,MaterialCommunityIcons,FontAwesome5,AntDesign } from "@expo/vector-icons";
 import { TextInput } from "react-native-gesture-handler";
 import Colors from "../config/Colors";
-import Clothes from "../config/Clothes"
+// import Clothes from "../config/Clothes"
 
 
-export default function Items() {
-  
+export default function Items(props) {
+  const navigation =props.navigation;
     // category
   const categories= ["General","Official","Summer","Winter"];
   const [categoryIndex,setCategoryIndex] = React.useState(0);
@@ -66,7 +66,66 @@ export default function Items() {
       <CategoriesList />
 
         {/* Items */}
-      <Clothes/>
+      {/* <Clothes navigation={this.props.navigation}/> */}
+      {/* <Clothes navigation={this.props.navigation}/> */}
+
+      <View style={styles.clothesContainer}>
+            
+            
+            <TouchableOpacity 
+            onPress = { () =>{
+                navigation.navigate("DetailScreen")
+            }}
+            style={styles.card}>
+                <View style={styles.inner}>
+                    <ImageBackground resizeMode={"contain"} style={styles.background}
+                        source={require("../assets/pinkT.jpg")}>
+                            <View style={styles.textContainer}>
+                                <Text>$400</Text>
+                                <AntDesign name="heart" size={24} color={Colors.primary} />
+                            </View>
+                    </ImageBackground>
+                </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.card}>
+                <View style={styles.inner}>
+                    <ImageBackground resizeMode={"contain"} style={styles.background}
+                        source={require("../assets/dress.jpg")}>
+                            <View style={styles.textContainer}>
+                                <Text>$400</Text>
+                                <AntDesign name="heart" size={24} color={Colors.primary} />
+                            </View>
+                    </ImageBackground>
+                </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.card}>
+                <View style={styles.inner}>
+                    <ImageBackground resizeMode={"contain"} style={styles.background}
+                        source={require("../assets/bag.jpg")}>
+                            <View style={styles.textContainer}>
+                                <Text>$400</Text>
+                                <AntDesign name="heart" size={24} color={Colors.primary} />
+                            </View>
+                    </ImageBackground>
+                </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.card}>
+                <View style={styles.inner}>
+                    <ImageBackground resizeMode={"contain"} style={styles.background}
+                        source={require("../assets/african.jpg")}>
+                            <View style={styles.textContainer}>
+                                <Text>$400</Text>
+                                <AntDesign name="heart" size={24} color={Colors.primary} />
+                            </View>
+                    </ImageBackground>
+                </View>
+            </TouchableOpacity>
+            
+
+        </View>
 
     </View>
     
@@ -119,4 +178,46 @@ const styles = StyleSheet.create({
     borderBottomWidth:2,
     borderColor:Colors.secondary,
   },
+
+  clothesContainer :{
+    flex:1,
+    width:"100%",
+    // height:"85%",
+    padding:5,
+    flexDirection:"row",
+    flexWrap:"wrap",
+
+},
+
+background:{
+    width:"100%",
+    height:"100%",
+},
+
+card:{
+    width:"50%",
+    height:"50%",
+    padding:5,
+    
+
+},
+inner:{
+    flex:1,
+    borderRadius:10,
+    backgroundColor:"lightgrey",
+    alignItems:"center",
+    justifyContent:"center",
+},
+
+textContainer:{
+    flexDirection:"row",
+    justifyContent:"space-between",
+    alignItems:"flex-end",
+    padding:5,
+},
+
+innerText:{
+    color:Colors.killed,
+    fontSize:20,
+},
 })

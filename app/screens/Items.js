@@ -41,7 +41,11 @@ export default function Items(props) {
           alignItems: "center",
         }}
       >
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress = { () =>{
+          navigation.navigate("DetailScreen")
+      }}
+        >
         <Ionicons name="ios-menu-outline" size={24} color="black" />
         </TouchableOpacity>
         <Ionicons name="cart-sharp" size={24} color="black" />

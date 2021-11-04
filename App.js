@@ -39,6 +39,13 @@ export default function App() {
 };
 
 
-// const appDraw = () =>{
-//   return
+// const Drawer = () =>{
+//   return (
+//     <NavigationContainer>
+//       <Drawer.Navigator>
+//       <Drawer.Screen name="ViewImage" component={ViewImage} />
+//       <Drawer.Screen name="Register" component={Register} />
+//     </Drawer.Navigator>
+//     </NavigationContainer>
+//   )
 // }

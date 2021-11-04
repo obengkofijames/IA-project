@@ -4,27 +4,27 @@ import * as Animatable from 'react-native-animatable';
 import {Fontisto,AntDesign} from "@expo/vector-icons";
 import Colors from '../config/Colors';
 
-export function DetailScreen({navigation}) {
+export function DetailScreenBag({navigation}) {
     
     return (
         <ImageBackground style={styles.background}
         source={require("../assets/hangerBox.jpg")}>
             <View style={styles.header}>
                 <View>
-                    <Image style={{width:600,height:160,}} resizeMode={"contain"} source={require("../assets/pinkT.jpg")} />
+                    <Image style={{width:600,height:160,}} resizeMode={"contain"} source={require("../assets/bag.jpg")} />
                 </View>
             </View>
             <Animatable.View 
             style={styles.footer}
             animation="fadeInUpBig">
                 <View style={styles.nameContainer}>
-                    <Text style={styles.itemName}>Pink T-shirt</Text>
+                    <Text style={styles.itemName}>Ladies Bag</Text>
                     <Text style={styles.priceText}>$400</Text>
                 </View>
 
                 <View style={styles.aboutContainer}>
                     <Text style={[styles.aboutText,{marginBottom:10,}]}>Description</Text>
-                    <Text>The T-shirt evolved from undergarments used in the 19th century and, in the mid-20th century, transitioned from undergarment to general-use casual clothing. They are typically made of cotton textile in a stockinette or jersey knit, which has a distinctively pliable texture compared to shirts made of woven cloth.</Text>
+                    <Text>A bucket bag is exactly what the name sounds like. The bag part is in the form of a bucket, with a little less cylindrical shape. It's usually attached to a shoulder strap but can also be attached to a hand strap. The top part is left open or secured by a zipper.</Text>
                 </View>
 
                 <View style={styles.addText}>
@@ -40,11 +40,11 @@ export function DetailScreen({navigation}) {
 
                 <View style={styles.itemImageContainer}>
                 <TouchableOpacity >
-                        <Image style={[styles.imageView,{width:600,height:140,}]} resizeMode={"contain"} source={require("../assets/jeans.jpg")} />
+                        <Image style={[styles.imageView,{width:600,height:140,}]} resizeMode={"contain"} source={require("../assets/FTYbag.jpg")} />
                 </TouchableOpacity>
 
                 <TouchableOpacity >
-                        <Image style={[styles.imageView,{width:600,height:140,}]} resizeMode={"contain"} source={require("../assets/pinkT.jpg")} />
+                        <Image style={[styles.imageView,{width:600,height:140,}]} resizeMode={"contain"} source={require("../assets/FTYbag2.jpg")} />
                 </TouchableOpacity>
                 </View>
             </Animatable.View>
@@ -127,4 +127,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default DetailScreen;
+export default DetailScreenBag;

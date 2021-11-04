@@ -9,7 +9,7 @@ import Colors from "../config/Colors";
 export default function Items(props) {
   const navigation =props.navigation;
     // category
-  const categories= ["General","Official","Summer","Winter"];
+  const categories= ["General","Official","Africa Wear","Casual"];
   const [categoryIndex,setCategoryIndex] = React.useState(0);
 
   const CategoriesList = () =>{
@@ -41,7 +41,9 @@ export default function Items(props) {
           alignItems: "center",
         }}
       >
+        <TouchableOpacity>
         <Ionicons name="ios-menu-outline" size={24} color="black" />
+        </TouchableOpacity>
         <Ionicons name="cart-sharp" size={24} color="black" />
         {/* <FontAwesome5 name="user" size={24} color="black" /> */}
         <Ionicons name="notifications-outline" size={20} color="black" />
@@ -88,7 +90,11 @@ export default function Items(props) {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity
+            onPress = { () =>{
+              navigation.navigate("DetailScreenDress")
+          }}
+             style={styles.card}>
                 <View style={styles.inner}>
                     <ImageBackground resizeMode={"contain"} style={styles.background}
                         source={require("../assets/dress.jpg")}>
@@ -100,7 +106,11 @@ export default function Items(props) {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity
+            onPress = { () =>{
+              navigation.navigate("DetailScreenBag")
+          }}
+             style={styles.card}>
                 <View style={styles.inner}>
                     <ImageBackground resizeMode={"contain"} style={styles.background}
                         source={require("../assets/bag.jpg")}>
@@ -112,7 +122,11 @@ export default function Items(props) {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity 
+            onPress = { () =>{
+              navigation.navigate("DetailScreenAfrican")
+          }}
+            style={styles.card}>
                 <View style={styles.inner}>
                     <ImageBackground resizeMode={"contain"} style={styles.background}
                         source={require("../assets/african.jpg")}>

@@ -4,27 +4,27 @@ import * as Animatable from 'react-native-animatable';
 import {Fontisto,AntDesign} from "@expo/vector-icons";
 import Colors from '../config/Colors';
 
-export function DetailScreen({navigation}) {
+export function DetailScreenDress({navigation}) {
     
     return (
         <ImageBackground style={styles.background}
         source={require("../assets/hangerBox.jpg")}>
             <View style={styles.header}>
                 <View>
-                    <Image style={{width:600,height:160,}} resizeMode={"contain"} source={require("../assets/pinkT.jpg")} />
+                    <Image style={{width:600,height:160,}} resizeMode={"contain"} source={require("../assets/dress.jpg")} />
                 </View>
             </View>
             <Animatable.View 
             style={styles.footer}
             animation="fadeInUpBig">
                 <View style={styles.nameContainer}>
-                    <Text style={styles.itemName}>Pink T-shirt</Text>
+                    <Text style={styles.itemName}>Ladies Straight wear</Text>
                     <Text style={styles.priceText}>$400</Text>
                 </View>
 
                 <View style={styles.aboutContainer}>
                     <Text style={[styles.aboutText,{marginBottom:10,}]}>Description</Text>
-                    <Text>The T-shirt evolved from undergarments used in the 19th century and, in the mid-20th century, transitioned from undergarment to general-use casual clothing. They are typically made of cotton textile in a stockinette or jersey knit, which has a distinctively pliable texture compared to shirts made of woven cloth.</Text>
+                    <Text>When it comes to finding a dress to wear on a night out, the options are endless. Certain outfits flatter certain body types, weather, and occasions, so it can be overwhelming to try and tackle the choices alone. Here is your guide to all dress types, for any occasion.</Text>
                 </View>
 
                 <View style={styles.addText}>
@@ -127,4 +127,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default DetailScreen;
+export default DetailScreenDress;

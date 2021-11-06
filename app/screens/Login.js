@@ -18,7 +18,7 @@ export default function Login(props) {
         //     flex: 1,
         //     paddingHorizontal: 20,
         //     justifyContent: "center",
-        //     alignItems: "center",
+        //      : "center",
         // }}
         >
         {/* <Image

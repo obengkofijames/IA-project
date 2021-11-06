@@ -32,7 +32,11 @@ export function DetailScreenBag({navigation}) {
                     <AntDesign name="down" size={24} color="black" />
                 </View>
 
-                <TouchableOpacity style={styles.addContainer}>
+                <TouchableOpacity 
+                onPress={() => {
+                    navigation.navigate("AddToCart");
+                    }}
+                style={styles.addContainer}>
                     <Fontisto name="shopping-basket-add" size={30} color="gold" />
                 </TouchableOpacity>
 

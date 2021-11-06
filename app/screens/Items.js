@@ -1,7 +1,7 @@
 import React from "react";
 import { View,StyleSheet,Text,TouchableOpacity, FlatList,Dimensions,ImageBackground} from "react-native";
 import { Ionicons,EvilIcons,MaterialCommunityIcons,FontAwesome5,AntDesign } from "@expo/vector-icons";
-import { TextInput } from "react-native-gesture-handler";
+import { ScrollView, TextInput } from "react-native-gesture-handler";
 import Colors from "../config/Colors";
 // import Clothes from "../config/Clothes"
 
@@ -75,7 +75,7 @@ export default function Items(props) {
       {/* <Clothes navigation={this.props.navigation}/> */}
       {/* <Clothes navigation={this.props.navigation}/> */}
 
-      <View style={styles.clothesContainer}>
+      <ScrollView contentContainerStyle={styles.clothesContainer}>
             
             
             <TouchableOpacity 
@@ -143,7 +143,7 @@ export default function Items(props) {
             </TouchableOpacity>
             
 
-        </View>
+        </ScrollView>
 
     </View>
     

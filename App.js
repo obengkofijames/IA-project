@@ -10,12 +10,11 @@ import DetailScreen from './app/screens/DetailScreen';
 import DetailScreenDress from './app/screens/DetailScreenDress';
 import DetailScreenBag from './app/screens/DetailScreenBag';
 import DetailScreenAfrican from './app/screens/DetailScreenAfrican';
+import AddToCart from './app/screens/AddToCart';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
 export default function App() {
-  const Drawer = createDrawerNavigator();
   const MainNavigator = createStackNavigator();
   return (
     <View style={{flex:1}}>
@@ -23,14 +22,13 @@ export default function App() {
           <MainNavigator.Navigator screenOptions={{headerShown:false}}>
             <MainNavigator.Screen name="Welcome to K-commerce" component={WelcomeScreen}/>
             <MainNavigator.Screen name="ViewImage" component={ViewImage}/>
-            <MainNavigator.Screen name="Login" component={Login}/>
             <MainNavigator.Screen name="Register" component={Register}/>
             <MainNavigator.Screen name="Items" component={Items}/>
             <MainNavigator.Screen name="DetailScreen" component={DetailScreen}/>
             <MainNavigator.Screen name="DetailScreenDress" component={DetailScreenDress}/>
             <MainNavigator.Screen name="DetailScreenBag" component={DetailScreenBag}/>
             <MainNavigator.Screen name="DetailScreenAfrican" component={DetailScreenAfrican}/>
-
+            <MainNavigator.Screen name="AddToCart" component={AddToCart}/>
           </MainNavigator.Navigator>
 
       </NavigationContainer>

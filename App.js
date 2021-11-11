@@ -22,6 +22,7 @@ export default function App() {
           <MainNavigator.Navigator screenOptions={{headerShown:false}}>
             <MainNavigator.Screen name="Welcome to K-commerce" component={WelcomeScreen}/>
             <MainNavigator.Screen name="ViewImage" component={ViewImage}/>
+            <MainNavigator.Screen name="Login" component={Login}/>
             <MainNavigator.Screen name="Register" component={Register}/>
             <MainNavigator.Screen name="Items" component={Items}/>
             <MainNavigator.Screen name="DetailScreen" component={DetailScreen}/>

@@ -8,8 +8,8 @@ function AddToCart(props) {
         <ScrollView contentContainerStyle={styles.container}>
             <View>
                 <Animatable.View animation="slideInDown" iterationCount="infinite" direction="alternate"style={{flexDirection:"row"}}>
-                <Text >Add to cart</Text>
-                <FontAwesome name="shopping-bag" size={24} color="black" style={{marginLeft:10,}} />
+                <Text style={{color:"#F4BB44"}} >Add to cart</Text>
+                <FontAwesome name="shopping-bag" size={24} color="white" style={{marginLeft:10,}} />
                 </Animatable.View>
                 <Animatable.View
                 animation="shake" 
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center',
+        backgroundColor:"black"
     },
 
     iconView:{
